@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./rs.css">
+    <title>A Paula nao tem oq fazer(pior q tenho)</title>
+
+  </head>
+  <body>
+    <div class="box">
+      <h1> Quer assirtir <span style="color: #D22020;font-weight: 700">A freira 2</span> comigo? </h1>
+    
+      <div class="buttons">
+        <button class="button button-1" id="sim">Sim</button>
+        <button class="button button-2" id="nao">Não</button>
+      </div>
+    </div>
+  </body>
+  <header>
+      <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const naoButton = document.getElementById("nao");
+      const simButton = document.getElementById("sim");
+
+      simButton.addEventListener("click", function () {
+        alert("beijos querido");
+      });
+
+      const handleNao = function () {
+        naoButton.style.position = "fixed";
+
+        const randTop =
+          Math.random() * (window.innerHeight - naoButton.offsetHeight);
+        const randLeft =
+          Math.random() * (window.innerWidth - naoButton.offsetWidth);
+
+        naoButton.style.top = randTop + "px";
+        naoButton.style.left = randLeft + "px";
+      };
+
+      naoButton.addEventListener("click", handleNao);
+      naoButton.addEventListener("mouseover", handleNao);
+    });
+  </script>
+  </header>
+
+  <main>oi</main>
+  <footer>oi</footer>
+</html>
